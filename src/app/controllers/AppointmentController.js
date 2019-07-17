@@ -7,7 +7,7 @@ import File from '../models/File';
 import Appointment from '../models/Appointment';
 import Notification from '../schemas/Notification';
 
-import Mail from '../../lib/mail';
+import Mail from '../../lib/Mail';
 
 class AppointmentController {
   async index(req, res) {
@@ -155,7 +155,7 @@ class AppointmentController {
     await Mail.sendEmail({
       to: `${appointment.provider.name} <${appointment.provider.email}>`,
       subject: 'Agendamento cancelado',
-      template: 'cancelation',
+      template: 'cancellation',
       context: {
         provider: appointment.provider.name,
         user: appointment.user.name,
