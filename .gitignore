@@ -2,3 +2,4 @@
 node_modules/
 temp/uploads/*
 !temp/uploads/.gitkeep
+yarn-error.log
